@@ -1,0 +1,9 @@
+<button (click)="toggleParagraph()" class="btn btn-primary">Display details</button>
+<p *ngIf="paragraphVisible">Secret password = tuna</p>
+<ul>
+  <li *ngFor="let toggle of toogleClicks; let i = index" [ngStyle]="{backgroundColor:getBackground(i)}"
+      [ngClass]="{white_color_text:i>=5}">
+    At {{toggle.crtTime|date:'h:mm a z'}} paragraph visibility
+    is {{toggle.paragraphVisible}}
+  </li>
+</ul>
